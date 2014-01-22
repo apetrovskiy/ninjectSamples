@@ -34,6 +34,9 @@ namespace ninjectInCycle
                 List<IMyObj> list =
                     requester.RequestObjects();
                 
+                foreach (MyObj listItem in list) {
+                    listItem.Dispose();
+                }
                 list.Clear();
                 list = null;
                 

@@ -14,7 +14,7 @@ namespace ninjectInCycle
     /// <summary>
     /// Description of IMyObj.
     /// </summary>
-    public interface IMyObj
+    public interface IMyObj : IDisposable
     {
         string Name { get; set; }
     }

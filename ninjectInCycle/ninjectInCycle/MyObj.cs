@@ -16,6 +16,12 @@ namespace ninjectInCycle
     /// </summary>
     public class MyObj : IMyObj
     {
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
+        
+        public virtual void Dispose()
+        {
+            Name = string.Empty;
+            GC.SuppressFinalize(this);
+        }
     }
 }
