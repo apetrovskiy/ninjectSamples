@@ -27,6 +27,8 @@ namespace ninjectInCycle
             Bind<Requester>()
                 .ToSelf()
                 .InSingletonScope();
+            
+            Bind<IChildKernel>().ToSelf().InSingletonScope();
         }
     }
 }

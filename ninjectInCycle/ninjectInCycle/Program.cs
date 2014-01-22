@@ -34,7 +34,7 @@ namespace ninjectInCycle
             for (int i = 0; i < 100000000; i++) {
                 
                 var childKernel = new ChildKernel(Kernel, new NjChildKernelModule());
-                Kernel.Bind<IChildKernel>().ToSelf().InSingletonScope();
+                childKernel.Settings.ActivationCacheDisabled = true;
                 
                 List<IMyObj> list =
                     requester.RequestObjects(childKernel);
@@ -44,6 +44,8 @@ namespace ninjectInCycle
                 }
                 list.Clear();
                 list = null;
+                
+                childKernel.Dispose();
             }
             
             Console.Write("Press any key to continue . . . ");
