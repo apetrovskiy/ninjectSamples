@@ -11,8 +11,11 @@ namespace ninjectInCycle
 {
     using System;
     using Ninject;
+    using Ninject.Activation;
     using Ninject.Extensions.NamedScope;
     using Ninject.Modules;
+    using Ninject.Parameters;
+    using Ninject.Extensions.ChildKernel;
     
     /// <summary>
     /// Description of NjModule.
@@ -21,10 +24,6 @@ namespace ninjectInCycle
     {
         public override void Load()
         {
-            Bind<IMyObj>()
-                .To<MyObj>()
-                .InCallScope();
-            
             Bind<Requester>()
                 .ToSelf()
                 .InSingletonScope();

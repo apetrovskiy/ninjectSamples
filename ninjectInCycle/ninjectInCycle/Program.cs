@@ -13,6 +13,8 @@ namespace ninjectInCycle
     using System.Collections;
     using System.Collections.Generic;
     using Ninject;
+    using Ninject.Parameters;
+    using Ninject.Extensions.ChildKernel;
     
     class Program
     {
@@ -31,15 +33,17 @@ namespace ninjectInCycle
             
             for (int i = 0; i < 100000000; i++) {
                 
+                var childKernel = new ChildKernel(Kernel, new NjChildKernelModule());
+                Kernel.Bind<IChildKernel>().ToSelf().InSingletonScope();
+                
                 List<IMyObj> list =
-                    requester.RequestObjects();
+                    requester.RequestObjects(childKernel);
                 
                 foreach (MyObj listItem in list) {
                     listItem.Dispose();
                 }
                 list.Clear();
                 list = null;
-                
             }
             
             Console.Write("Press any key to continue . . . ");

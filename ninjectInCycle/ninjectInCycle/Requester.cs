@@ -13,18 +13,19 @@ namespace ninjectInCycle
     using System.Collections;
     using System.Collections.Generic;
     using Ninject;
+    using Ninject.Extensions.ChildKernel;
     
     /// <summary>
     /// Description of Requester.
     /// </summary>
     public class Requester
     {
-        public List<IMyObj> RequestObjects()
+        public List<IMyObj> RequestObjects(IChildKernel childKernel)
         {
             List<IMyObj> list = new List<IMyObj>();
             
             for(int i = 0; i < 10; i++) {
-                var myObj = Program.Kernel.Get<IMyObj>();
+                var myObj = childKernel.Get<IMyObj>();
                 myObj.Name = "abcdefghijklmnopqrstuvwxyz";
                 list.Add(myObj);
             }
