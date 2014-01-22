@@ -1,0 +1,12 @@
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\obj\Debug\ninjectInCycle.csprojResolveAssemblyReference.cache
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\ninjectInCycle.exe.config
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\ninjectInCycle.exe
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\ninjectInCycle.pdb
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.dll
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.Extensions.NamedScope.dll
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.pdb
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.xml
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.Extensions.NamedScope.pdb
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\bin\Debug\Ninject.Extensions.NamedScope.xml
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\obj\Debug\ninjectInCycle.exe
+C:\Projects\probe\ninjectInCycle\ninjectInCycle\obj\Debug\ninjectInCycle.pdb
