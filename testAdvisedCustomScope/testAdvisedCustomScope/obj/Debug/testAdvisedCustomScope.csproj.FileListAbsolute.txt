@@ -1,0 +1,13 @@
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\testAdvisedCustomScope.dll.config
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\testAdvisedCustomScope.dll
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\testAdvisedCustomScope.pdb
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\Ninject.dll
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\xunit.dll
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\xunit.extensions.dll
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\Ninject.pdb
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\Ninject.xml
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\xunit.xml
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\bin\Debug\xunit.extensions.xml
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\obj\Debug\testAdvisedCustomScope.csprojResolveAssemblyReference.cache
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\obj\Debug\testAdvisedCustomScope.dll
+C:\Projects\ninjectSamples\testAdvisedCustomScope\testAdvisedCustomScope\obj\Debug\testAdvisedCustomScope.pdb
