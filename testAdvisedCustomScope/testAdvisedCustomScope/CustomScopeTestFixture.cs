@@ -67,7 +67,7 @@ namespace testAdvisedCustomScope
             Assert.Null(testA3);
             Assert.Null(testB);
             
-            Assert.
+            // Assert.
         }
     }
 }
