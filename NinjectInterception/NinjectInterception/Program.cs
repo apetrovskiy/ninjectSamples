@@ -12,6 +12,7 @@ namespace NinjectInterception
     using System;
     using Ninject;
     using Ninject.Extensions.Interception.Advice;
+    using Ninject.Parameters;
     
     class Program
     {
@@ -27,6 +28,13 @@ namespace NinjectInterception
             
             var myClass = kernel.Get<MyClass>();
             myClass.Test01();
+            
+            var myClass02 = kernel.Get<MyClass02>();
+            myClass02.Test02();
+            
+            // var myClass03 = kernel.Get<MyClass03>("withParam", new Parameter("data", 333, false));
+            var myClass03 = kernel.Get<MyClass03>(new Parameter("data", "333", false));
+            myClass03.Test03();
             
             Console.Write("Press any key to continue . . . ");
             Console.ReadKey(true);

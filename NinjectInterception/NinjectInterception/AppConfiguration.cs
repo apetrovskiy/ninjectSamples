@@ -9,8 +9,15 @@
 
 namespace NinjectInterception
 {
-    using System;
+    //using System;
+    using System.Linq;
     using Ninject;
+    //using Ninject.Parameters;
+    //using Ninject.Syntax;
+    //using Ninject.Extensions.Conventions.Syntax;
+    //using Ninject.Extensions.Conventions.BindingBuilder;
+    //using Ninject.Extensions.Conventions.BindingGenerators;
+    //using Ninject.Modules;
     using Ninject.Extensions.Interception.Infrastructure.Language;
     using Ninject.Extensions.Conventions;
     
@@ -44,13 +51,30 @@ namespace NinjectInterception
             Kernel.Bind(convention => convention
                         .FromAssembliesMatching("*.exe")
                         .SelectAllClasses()
-                        // .BindAllInterfaces()
-                        .BindToSelf()
+                        .BindAllInterfaces()
+                        // .BindToSelf()
                         .Configure(x => x
                                    .InSingletonScope()
+                                   // .Named("")
                                    .Intercept()
                                    // .With<ILoggerAspect>()));
                                    .With<Log4NetAspect>()));
+            
+            //Kernel.Bind(convention => convention
+            //            .FromAssembliesMatching("*.exe")
+            //            .IncludingNonePublicTypes()
+            //            .SelectAllClasses()
+            //            .BindToSelf()
+            //            .Configure(x => x
+            //                       .InSingletonScope()
+            //                       .WithConstructorArgument<string>("data", r => r.Parameters.First().GetValue(r.Request.Target))
+            //                       .Intercept()
+            //                       .With<Log4NetAspect>()));
+
+            Kernel.Bind<MyClass03>()
+                .ToSelf()
+                .WithConstructorArgument("data",
+                    r => r.Parameters.First().GetValue(r.Request.ParentContext, r.Request.Target));
         }
     
         internal static StandardKernel Resolver()

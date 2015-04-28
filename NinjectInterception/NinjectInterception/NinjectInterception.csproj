@@ -73,6 +73,8 @@
     <Compile Include="ILoggerAspect.cs" />
     <Compile Include="Log4NetAspect.cs" />
     <Compile Include="LogAttribute.cs" />
+    <Compile Include="MyClass02.cs" />
+    <Compile Include="MyClass03.cs" />
     <Compile Include="MyModule.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
