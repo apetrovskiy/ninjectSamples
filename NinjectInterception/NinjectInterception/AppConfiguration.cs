@@ -12,6 +12,7 @@ namespace NinjectInterception
     using System;
     using Ninject;
     using Ninject.Extensions.Interception.Infrastructure.Language;
+    using Ninject.Extensions.Conventions;
     
     /// <summary>
     /// Description of AppConfiguration.
@@ -38,8 +39,18 @@ namespace NinjectInterception
     
         void Load()
         {
-            Kernel.Bind<ILoggerAspect>().To<Log4NetAspect>().InSingletonScope();
-            Kernel.Bind<MyClass>().ToSelf().Intercept().With<ILoggerAspect>();
+            // Kernel.Bind<ILoggerAspect>().To<Log4NetAspect>().InSingletonScope();
+            // Kernel.Bind<MyClass>().ToSelf().Intercept().With<ILoggerAspect>();
+            Kernel.Bind(convention => convention
+                        .FromAssembliesMatching("*.exe")
+                        .SelectAllClasses()
+                        // .BindAllInterfaces()
+                        .BindToSelf()
+                        .Configure(x => x
+                                   .InSingletonScope()
+                                   .Intercept()
+                                   // .With<ILoggerAspect>()));
+                                   .With<Log4NetAspect>()));
         }
     
         internal static StandardKernel Resolver()
