@@ -10,6 +10,8 @@
 namespace NinjectInterception
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using Ninject;
     using Ninject.Extensions.Interception.Advice;
     using Ninject.Parameters;
@@ -35,6 +37,10 @@ namespace NinjectInterception
             // var myClass03 = kernel.Get<MyClass03>("withParam", new Parameter("data", 333, false));
             var myClass03 = kernel.Get<MyClass03>(new Parameter("data", "333", false));
             myClass03.Test03();
+            
+            var list = new List<string>();
+            int i = 1;
+            
             
             Console.Write("Press any key to continue . . . ");
             Console.ReadKey(true);
