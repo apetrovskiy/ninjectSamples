@@ -18,10 +18,10 @@ namespace NinjectInterception
     {
         string _data;
         
-        public MyClass03()
-        {
-            
-        }
+//        public MyClass03()
+//        {
+//            
+//        }
         
         public MyClass03(string data)
         {

@@ -51,14 +51,17 @@ namespace NinjectInterception
             Kernel.Bind(convention => convention
                         .FromAssembliesMatching("*.exe")
                         .SelectAllClasses()
-                        .BindAllInterfaces()
-                        // .BindToSelf()
+                        // .Where(x => x.
+                        // .BindAllInterfaces()
+                        .BindToSelf()
                         .Configure(x => x
                                    .InSingletonScope()
                                    // .Named("")
                                    .Intercept()
                                    // .With<ILoggerAspect>()));
                                    .With<Log4NetAspect>()));
+            
+            // Kernel.Bind().
             
             //Kernel.Bind(convention => convention
             //            .FromAssembliesMatching("*.exe")
@@ -71,10 +74,10 @@ namespace NinjectInterception
             //                       .Intercept()
             //                       .With<Log4NetAspect>()));
 
-            Kernel.Bind<MyClass03>()
-                .ToSelf()
-                .WithConstructorArgument("data",
-                    r => r.Parameters.First().GetValue(r.Request.ParentContext, r.Request.Target));
+//            Kernel.Bind<MyClass03>()
+//                .ToSelf()
+//                .WithConstructorArgument("data",
+//                    r => r.Parameters.First().GetValue(r.Request.ParentContext, r.Request.Target));
         }
     
         internal static StandardKernel Resolver()
